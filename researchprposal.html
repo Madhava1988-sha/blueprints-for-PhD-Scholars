@@ -1,0 +1,2103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Write A Yes-Ready Research Proposal (Step By Step For PhD Students)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --accent-yellow: #ffd54f;
+      --accent-yellow-soft: #fff3c1;
+      --accent-green: #66bb6a;
+      --accent-green-soft: #e2f6e4;
+      --accent-border: #e0e0e0;
+      --accent-gray: #f5f5f5;
+      --text-main: #000000;
+      --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.06);
+      --radius-lg: 14px;
+      --radius-xl: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #ffffff;
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout */
+
+    .page {
+      display: flex;
+      min-height: 100vh;
+      background: #ffffff;
+    }
+
+    .sidebar {
+      width: 260px;
+      border-right: 1px solid var(--accent-border);
+      padding: 20px 18px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      background: #ffffff;
+    }
+
+    .sidebar-title {
+      font-weight: 800;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .sidebar-subtitle {
+      font-size: 12px;
+      opacity: 0.8;
+      margin-bottom: 16px;
+    }
+
+    .nav-section-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin: 18px 0 6px;
+      opacity: 0.7;
+    }
+
+    .nav-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .nav-list li {
+      margin: 4px 0;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 6px 8px;
+      border-radius: 999px;
+      transition: background 0.15s ease, transform 0.1s ease;
+    }
+
+    .nav-link:hover {
+      background: var(--accent-yellow-soft);
+      transform: translateX(2px);
+    }
+
+    .tag-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      border: 1px dashed #cccccc;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+
+    .tag-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-green);
+    }
+
+    .main {
+      flex: 1;
+      padding: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header.hero {
+      border-radius: 24px;
+      padding: 22px 22px 18px;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, var(--accent-yellow-soft), #ffffff);
+      border: 1px solid var(--accent-border);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-badge-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+      font-size: 11px;
+    }
+
+    .hero-badge {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid #e0e0e0;
+      background: #ffffffdd;
+    }
+
+    .hero h1 {
+      font-size: 24px;
+      margin: 6px 0 4px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-sub {
+      font-size: 13px;
+      max-width: 560px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+      margin-bottom: 4px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid #000000;
+      background: #000000;
+      color: #ffffff;
+      font-size: 13px;
+      cursor: pointer;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease, color 0.1s ease;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+    }
+
+    .btn-outline {
+      background: #ffffff;
+      color: #000000;
+    }
+
+    .btn-outline:hover {
+      background: var(--accent-yellow-soft);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border-style: dashed;
+    }
+
+    .hero-label-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+      font-size: 11px;
+    }
+
+    .hero-small-chip {
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid #dddddd;
+      background: #ffffffdd;
+    }
+
+    .hero-progress {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 11px;
+      align-items: flex-end;
+    }
+
+    .hero-progress-bar {
+      width: 180px;
+      height: 6px;
+      border-radius: 999px;
+      background: #ffffffaa;
+      border: 1px solid #e0e0e0;
+      overflow: hidden;
+    }
+
+    .hero-progress-fill {
+      width: 20%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent-green), var(--accent-yellow));
+    }
+
+    /* Sections */
+
+    section {
+      margin-bottom: 26px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .section-kicker {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.7;
+    }
+
+    .section-title {
+      font-size: 18px;
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+
+    .section-note {
+      font-size: 11px;
+      opacity: 0.8;
+    }
+
+    .card-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--accent-border);
+      padding: 12px 12px 10px;
+      background: #ffffff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .card-soft-yellow {
+      background: var(--accent-yellow-soft);
+    }
+
+    .card-soft-green {
+      background: var(--accent-green-soft);
+    }
+
+    .card-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.75;
+      margin-bottom: 4px;
+    }
+
+    .card-title {
+      font-size: 14px;
+      margin: 2px 0 4px;
+      font-weight: 700;
+    }
+
+    .card-body {
+      font-size: 13px;
+    }
+
+    .hint {
+      font-size: 12px;
+      padding: 6px 8px;
+      border-radius: 8px;
+      background: var(--accent-gray);
+      border: 1px dashed var(--accent-border);
+      margin-top: 6px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 14px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 8px 0;
+    }
+
+    .pill {
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--accent-border);
+      font-size: 11px;
+      background: #ffffff;
+    }
+
+    /* Stepper */
+
+    .stepper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 12px;
+      margin-top: 6px;
+    }
+
+    .stepper-item {
+      flex: 1 1 140px;
+      min-width: 140px;
+      border-radius: 999px;
+      border: 1px solid var(--accent-border);
+      padding: 6px 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+    }
+
+    .stepper-num {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      color: #ffffff;
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* List styles */
+
+    ul.clean,
+    ol.clean {
+      padding-left: 18px;
+      margin-top: 6px;
+      margin-bottom: 6px;
+      font-size: 13px;
+    }
+
+    .checklist {
+      list-style: none;
+      padding-left: 0;
+      margin: 6px 0;
+      font-size: 13px;
+    }
+
+    .checklist li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 4px;
+    }
+
+    .checklist li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 11px;
+      color: var(--accent-green);
+    }
+
+    .xlist li::before {
+      content: "✖";
+      color: #c62828;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      font-size: 10px;
+      border-radius: 999px;
+      border: 1px solid var(--accent-border);
+      background: #ffffff;
+      margin-left: 6px;
+    }
+
+    /* Details / accordion */
+
+    details {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--accent-border);
+      padding: 8px 10px;
+      background: #ffffff;
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .summary-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.7;
+      margin-right: 10px;
+    }
+
+    .summary-main {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .summary-title {
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .summary-sub {
+      font-size: 11px;
+      opacity: 0.8;
+    }
+
+    .summary-icon {
+      font-size: 18px;
+      margin-left: 10px;
+    }
+
+    details[open] .summary-icon {
+      transform: rotate(90deg);
+    }
+
+    .details-body {
+      margin-top: 8px;
+      font-size: 13px;
+    }
+
+    .template-box {
+      border-radius: 10px;
+      border: 1px dashed var(--accent-border);
+      padding: 6px 8px;
+      background: var(--accent-gray);
+      font-size: 12px;
+      margin-top: 6px;
+    }
+
+    .template-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.8;
+      margin-bottom: 4px;
+    }
+
+    .example-block {
+      border-radius: 10px;
+      border: 1px solid var(--accent-border);
+      padding: 6px 8px;
+      background: #ffffff;
+      font-size: 12px;
+      margin-top: 6px;
+    }
+
+    .example-label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.9;
+      margin-bottom: 4px;
+    }
+
+    .back-to-top {
+      margin-top: 8px;
+      font-size: 11px;
+      text-align: right;
+    }
+
+    .back-to-top a {
+      text-decoration: underline;
+    }
+
+    /* Tables */
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 10px;
+      overflow: hidden;
+      font-size: 12px;
+      margin-top: 6px;
+    }
+
+    th,
+    td {
+      border: 1px solid var(--accent-border);
+      padding: 6px 8px;
+      text-align: left;
+    }
+
+    th {
+      background: var(--accent-yellow-soft);
+      font-weight: 600;
+    }
+
+    /* Flag board */
+
+    .flag-board {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 12px;
+    }
+
+    .flag {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--accent-border);
+      padding: 10px;
+      box-shadow: var(--shadow-soft);
+      background: #ffffff;
+      font-size: 13px;
+    }
+
+    .flag-title {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .flag-badge {
+      display: inline-block;
+      padding: 2px 6px;
+      font-size: 10px;
+      border-radius: 999px;
+      background: #fff0f0;
+      border: 1px solid #f5b3b3;
+      margin-bottom: 4px;
+    }
+
+    /* Timeline */
+
+    .timeline {
+      position: relative;
+      padding-left: 22px;
+      margin-top: 8px;
+      font-size: 13px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--accent-green-soft);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -2px;
+      top: 2px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      border: 2px solid #ffffff;
+      box-shadow: 0 0 0 2px var(--accent-green-soft);
+    }
+
+    .timeline-title {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .timeline-text {
+      font-size: 12px;
+    }
+
+    /* Footer */
+
+    footer {
+      margin-top: 24px;
+      font-size: 11px;
+      opacity: 0.8;
+      border-top: 1px solid var(--accent-border);
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .quick-link {
+      font-size: 11px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 960px) {
+      .page {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        position: static;
+        height: auto;
+        width: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--accent-border);
+        display: none; /* hidden on small screens to keep it clean */
+      }
+
+      .main {
+        padding: 16px;
+      }
+
+      header.hero {
+        padding: 18px 14px;
+      }
+
+      .hero-progress {
+        position: static;
+        align-items: flex-start;
+        margin-top: 10px;
+      }
+
+      .hero-progress-bar {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Side Navigation (desktop) -->
+    <aside class="sidebar">
+      <div class="sidebar-title">Proposal Guide Map</div>
+      <div class="sidebar-subtitle">Click any block to jump.</div>
+
+      <div class="nav-section">
+        <div class="nav-section-label">Start</div>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#section-start">Overview & Fast Map</a></li>
+          <li><a class="nav-link" href="#section-what">What A Proposal Really Is</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-label">Big picture</div>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#section-types">Types Of Proposals</a></li>
+          <li><a class="nav-link" href="#section-purpose">Why It Matters</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-label">Core parts</div>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#section-structure">Three Big Blocks</a></li>
+          <li><a class="nav-link" href="#section-format">Each Part: Title To Ethics</a></li>
+          <li><a class="nav-link" href="#section-budget-team">Money & Team</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-label">Quality</div>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#section-writing">Writing Style & Layout</a></li>
+          <li><a class="nav-link" href="#section-reject">Why Proposals Fail</a></li>
+          <li><a class="nav-link" href="#section-checklists">Checklists & Quick Tests</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-label">Example</div>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#section-mini-example">Full Walk-Through Example</a></li>
+          <li><a class="nav-link" href="#section-final-check">Final 10-Minute Check</a></li>
+        </ul>
+      </div>
+
+      <div style="margin-top:18px;font-size:11px;">Use this guide for:</div>
+      <div class="pill-row">
+        <span class="tag-pill"><span class="tag-dot"></span> PhD proposal</span>
+        <span class="tag-pill"><span class="tag-dot"></span> Grant writing</span>
+        <span class="tag-pill"><span class="tag-dot"></span> Thesis plan</span>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Hero -->
+      <header class="hero" id="top">
+        <div class="hero-badge-row">
+          <span class="hero-badge">Step-By-Step For PhD Students</span>
+          <span class="hero-badge">Use today to write your own proposal</span>
+        </div>
+        <h1>Write A Yes-Ready Research Proposal</h1>
+        <p class="hero-sub">
+          Clear, slow, and full guide. You will see what to write, where to write it, and simple examples for each part,
+          so you can build a strong research proposal from zero.
+        </p>
+        <div class="hero-actions">
+          <a href="#section-start" class="btn">1. I am new. Show me the map.</a>
+          <a href="#section-format" class="btn btn-outline">2. I know basics. Show the parts.</a>
+          <a href="#section-mini-example" class="btn btn-ghost">3. Just give me a full example.</a>
+        </div>
+        <div class="hero-label-row">
+          <span class="hero-small-chip">White background · Black text · Yellow & green highlights</span>
+          <span class="hero-small-chip">Made so a first-year student can follow</span>
+        </div>
+        <div class="hero-progress">
+          <div>Progress bar for your proposal draft</div>
+          <div class="hero-progress-bar">
+            <div class="hero-progress-fill"></div>
+          </div>
+          <div style="opacity:0.7;">After you finish each big block, move this in your mind.</div>
+        </div>
+      </header>
+
+      <!-- Section: Start & Map -->
+      <section id="section-start">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Start here</div>
+            <h2 class="section-title">How this guide works</h2>
+          </div>
+          <div class="section-note">Read slow. Follow steps. Copy examples in your own topic.</div>
+        </div>
+
+        <div class="card-row">
+          <div class="card card-soft-yellow">
+            <div class="card-label">Idea</div>
+            <div class="card-title">A proposal is a plan, not the full study</div>
+            <div class="card-body">
+              You are not writing results. You are not writing a full thesis.
+              You are telling others what you want to study, why it matters, and how you will do it.
+              Think of it like a building plan before you build a house.
+            </div>
+            <div class="hint">
+              If you feel you "do not know enough yet", that is normal. The proposal shows that you understand the
+              problem and have a clear, honest plan.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-label">Who reads it</div>
+            <div class="card-title">Your reader’s secret checklist</div>
+            <div class="card-body">
+              Your reader silently checks:
+              <ul class="clean">
+                <li>Is this problem worth time and money?</li>
+                <li>Is the plan clear and realistic?</li>
+                <li>Can this person really do it?</li>
+              </ul>
+              Your job is to make each answer an easy “yes”.
+            </div>
+          </div>
+
+          <div class="card card-soft-green">
+            <div class="card-label">Quick path</div>
+            <div class="card-title">Six steps from idea to strong proposal</div>
+            <div class="card-body">
+              <div class="stepper">
+                <div class="stepper-item">
+                  <div class="stepper-num">1</div>
+                  <div>Clarify your problem and why it matters.</div>
+                </div>
+                <div class="stepper-item">
+                  <div class="stepper-num">2</div>
+                  <div>Choose the right type of proposal and funder.</div>
+                </div>
+                <div class="stepper-item">
+                  <div class="stepper-num">3</div>
+                  <div>Plan the big structure: beginning, middle, end.</div>
+                </div>
+                <div class="stepper-item">
+                  <div class="stepper-num">4</div>
+                  <div>Write each part (title, abstract, etc.) with examples.</div>
+                </div>
+                <div class="stepper-item">
+                  <div class="stepper-num">5</div>
+                  <div>Check money, team, and ethics are clear.</div>
+                </div>
+                <div class="stepper-item">
+                  <div class="stepper-num">6</div>
+                  <div>Use checklists so it does not get rejected for basic issues.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="back-to-top"><a href="#top">Back to top</a></div>
+      </section>
+
+      <!-- Section: What a proposal is -->
+      <section id="section-what">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Basics</div>
+            <h2 class="section-title">What a research proposal really is (in plain words)</h2>
+          </div>
+          <div class="section-note">One sentence, then deeper, then example.</div>
+        </div>
+
+        <div class="two-col">
+          <div class="card">
+            <div class="card-title">Short meaning</div>
+            <div class="card-body">
+              A research proposal is a written plan that:
+              <ul class="clean">
+                <li>Shows the problem you want to study.</li>
+                <li>Explains why this problem is important.</li>
+                <li>Describes how you will study it.</li>
+                <li>States how long it will take and what it will cost.</li>
+              </ul>
+            </div>
+            <div class="hint">
+              Think: <strong>"Here is the problem. Here is my way to solve it. Here is why I am able to do it."</strong>
+            </div>
+          </div>
+
+          <div class="card card-soft-green">
+            <div class="card-title">Tiny everyday example</div>
+            <div class="card-body">
+              Imagine you ask your department for money to run a workshop.
+              You send a note that says:
+              <ul class="clean">
+                <li>What workshop is about (problem).</li>
+                <li>Why students need it (importance).</li>
+                <li>How you will run it (method).</li>
+                <li>How much money and time it needs (cost and time).</li>
+              </ul>
+              That note is a small proposal. A research proposal is the same idea, but in more depth and with more care.
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:10px;">
+          <div class="card-label">PhD-level example</div>
+          <div class="card-title">Example topic: “Phone addiction & sleep in first-year students”</div>
+          <div class="card-body">
+            If this is your topic, your proposal must answer:
+            <ul class="clean">
+              <li>Problem: “Many first-year students use phones late at night. Sleep may be poor.”</li>
+              <li>Why it matters: “Poor sleep can hurt grades and mental health.”</li>
+              <li>Plan: “We will measure phone use and sleep quality with a survey and sleep logs.”</li>
+              <li>Cost: “We need money for survey tools, small gift cards, and data software.”</li>
+              <li>Time: “Study will run over 9 months: design, collect data, analyze, write.”</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="back-to-top"><a href="#top">Back to top</a></div>
+      </section>
+
+      <!-- Section: Types of proposals -->
+      <section id="section-types">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Big picture</div>
+            <h2 class="section-title">Different types of research proposals</h2>
+          </div>
+          <div class="section-note">Use the right “shape” so your reader is not confused.</div>
+        </div>
+
+        <p style="font-size:13px;">
+          There are several common types of proposals. You do not need to use all of them.
+          You just need to know which one fits your case. Here they are with simple examples.
+        </p>
+
+        <div class="card-row">
+          <div class="card">
+            <div class="card-label">Inside your own place</div>
+            <div class="card-title">Internal proposal</div>
+            <div class="card-body">
+              <strong>Meaning:</strong> Sent inside your own university or department.
+              Often for small changes or internal funds.
+              <div class="example-block">
+                <div class="example-label">Example</div>
+                <p style="margin:0;">
+                  You ask your department for a small grant to buy software for your PhD study.
+                  You send a proposal to your Head of Department only.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-label">Outside funder</div>
+            <div class="card-title">External proposal</div>
+            <div class="card-body">
+              <strong>Meaning:</strong> Sent to another body or agency.
+              For example, a research council, charity, or industry partner.
+              <div class="example-block">
+                <div class="example-label">Example</div>
+                <p style="margin:0;">
+                  You send a proposal to a national science council to fund your 3-year PhD project on climate-smart
+                  farming.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-soft-yellow">
+            <div class="card-label">By request</div>
+            <div class="card-title">Solicited proposal</div>
+            <div class="card-body">
+              <strong>Meaning:</strong> Someone asks for it in a formal call.
+              You respond to a document like “Request for Proposals (RFP)”.
+              <div class="example-block">
+                <div class="example-label">Example</div>
+                <p style="margin:0;">
+                  A health agency releases a call: “We want studies on vaccine uptake in rural areas”.
+                  You send a proposal that follows their template.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-soft-green">
+            <div class="card-label">Your own push</div>
+            <div class="card-title">Unsolicited proposal</div>
+            <div class="card-body">
+              <strong>Meaning:</strong> No one asked you.
+              You send it because you think they may like your idea.
+              <div class="example-block">
+                <div class="example-label">Example</div>
+                <p style="margin:0;">
+                  You send a proposal to a tech company to study mental health and their app use among teens,
+                  even though they did not post a call.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-label">Short first step</div>
+            <div class="card-title">Pre-proposal</div>
+            <div class="card-body">
+              <strong>Meaning:</strong> Very short version (often 1–2 pages or a letter).
+              Used so that the funder can decide if you should send the full version.
+              <div class="example-block">
+                <div class="example-label">Example</div>
+                <p style="margin:0;">
+                  You send a one-page concept note about “screen time and sleep”.
+                  If they like it, they ask for the full 20-page proposal.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-label">Ongoing work</div>
+            <div class="card-title">Continuation & renewal</div>
+            <div class="card-body">
+              <strong>Continuation:</strong> You already got funding for year 1. Now you ask for year 2 or 3, with proof
+              of progress.<br />
+              <strong>Renewal:</strong> Project is ending. You ask for a fresh cycle of support for a new phase.
+              <div class="example-block">
+                <div class="example-label">Example</div>
+                <p style="margin:0;">
+                  Your community health project finishes its first 3 years. You send a renewal proposal to test new
+                  training tools in more clinics.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hint">
+          For most PhD students, you will write:
+          <strong>an internal proposal, an external proposal, or a pre-proposal</strong>.
+          Always read the exact rules of the place you send it to.
+        </div>
+
+        <div class="back-to-top"><a href="#top">Back to top</a></div>
+      </section>
+
+      <!-- Section: Purpose, characteristics, qualities, need, functions -->
+      <section id="section-purpose">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Why this matters</div>
+            <h2 class="section-title">What your proposal must do and how it looks when it is good</h2>
+          </div>
+          <div class="section-note">Here we blend “purpose”, “characteristics”, “qualities”, and “functions”.</div>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <div class="card card-soft-yellow">
+              <div class="card-label">Main job</div>
+              <div class="card-title">Three things your proposal must prove</div>
+              <div class="card-body">
+                Your text must quietly answer:
+                <ol class="clean">
+                  <li><strong>Problem is important.</strong> It is not a tiny or boring issue.</li>
+                  <li><strong>Plan is clear and realistic.</strong> Methods, time, and cost make sense.</li>
+                  <li><strong>You and your team can do it.</strong> Skills and past work match the plan.</li>
+                </ol>
+                If any one is weak, your proposal is at risk.
+              </div>
+            </div>
+
+            <div class="card" style="margin-top:10px;">
+              <div class="card-label">PhD example</div>
+              <div class="card-title">Check on our “phone & sleep” example</div>
+              <div class="card-body">
+                <ul class="checklist">
+                  <li><strong>Important?</strong> Yes. Sleep and grades matter to the university.</li>
+                  <li><strong>Clear plan?</strong> Survey + sleep logs + basic stats. Simple and doable in one year.</li>
+                  <li><strong>Right person?</strong> You show that you know basic statistics and have done a pilot survey.</li>
+                </ul>
+                If you miss one, a reviewer may think:
+                “Nice idea, but not for funding now.”
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="card">
+              <div class="card-label">Look and feel</div>
+              <div class="card-title">How a good proposal “feels” when reading</div>
+              <div class="card-body">
+                <ul class="checklist">
+                  <li>Scope is clear. Not too wide, not too tiny.</li>
+                  <li>Time and money are realistic. Not fantasy, not vague.</li>
+                  <li>Language is plain. No need to guess what you mean.</li>
+                  <li>Benefits for funder or field are clear, not hidden.</li>
+                  <li>Risks are named honestly with ideas to handle them.</li>
+                  <li>Length is enough but not full of empty words.</li>
+                </ul>
+                <div class="hint">
+                  A good proposal reads like a clear plan from a careful person, not like a sales pitch or a poem.
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-soft-green" style="margin-top:10px;">
+              <div class="card-label">Why prepare well</div>
+              <div class="card-title">Your proposal is your first “exam” as a researcher</div>
+              <div class="card-body">
+                <ul class="clean">
+                  <li>Funds are limited, so weak proposals are cut quickly.</li>
+                  <li>Good proposals help you plan your whole PhD path.</li>
+                  <li>Writing forces you to fix fuzzy thinking early.</li>
+                  <li>Reviewers can give feedback to improve the study.</li>
+                </ul>
+                Time spent here saves months of pain later in your PhD.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="back-to-top"><a href="#top">Back to top</a></div>
+      </section>
+
+      <!-- Section: Composition (Intro, Body, Conclusion) -->
+      <section id="section-structure">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Skeleton</div>
+            <h2 class="section-title">Three big blocks: beginning, middle, end</h2>
+          </div>
+          <div class="section-note">Every proposal, no matter how long, uses this simple shape.</div>
+        </div>
+
+        <div class="card-row">
+          <div class="card card-soft-yellow">
+            <div class="card-title">Beginning = Introduction</div>
+            <div class="card-body">
+              <ul class="clean">
+                <li>Shows the problem.</li>
+                <li>Explains who is hurt by this problem.</li>
+                <li>Gives a simple idea of your solution.</li>
+                <li>States main aim and maybe 2–4 clear objectives.</li>
+              </ul>
+              <div class="example-block">
+                <div class="example-label">Example line</div>
+                “This study will examine how late-night phone use affects sleep quality in first-year students at X
+                University.”
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Middle = Body</div>
+            <div class="card-body">
+              This is where detail lives.
+              <ul class="clean">
+                <li>Background and literature.</li>
+                <li>Preliminary work you already did (if any).</li>
+                <li>Research methods (design, sample, tools, analysis).</li>
+                <li>Timeline and plan of tasks.</li>
+                <li>Budget and resources.</li>
+              </ul>
+              If the reader is lost here, the proposal fails.
+            </div>
+          </div>
+
+          <div class="card card-soft-green">
+            <div class="card-title">End = Conclusion / Recommendation</div>
+            <div class="card-body">
+              <ul class="clean">
+                <li>Reminds the reader of the benefit if they say “yes”.</li>
+                <li>Shows the main expected results or impact.</li>
+                <li>May make a clear ask (“We request X amount for Y years”).</li>
+              </ul>
+              <div class="example-block">
+                <div class="example-label">Example lines</div>
+                “By funding this study, the university will gain data to design better rules on phone use and sleep for
+                first-year students.”
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="back-to-top"><a href="#top">Back to top</a></div>
+      </section>
+
+      <!-- Section: Typical proposal format: each part as accordion -->
+      <section id="section-format">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Core parts</div>
+            <h2 class="section-title">Every main part of your proposal, step by step</h2>
+          </div>
+          <div class="section-note">Open each box. Copy the pattern. Change the content to your own topic.</div>
+        </div>
+
+        <!-- Title -->
+        <details open>
+          <summary>
+            <div class="summary-main">
+              <span class="summary-label">Part 1</span>
+              <span class="summary-title">Title</span>
+              <span class="summary-sub">Short, clear, under ~10 words if possible.</span>
+            </div>
+            <span class="summary-icon">›</span>
+          </summary>
+          <div class="details-body">
+            <p><strong>Your goal:</strong> Let the reader know at once what you will study, in plain words.</p>
+
+            <div class="two-col">
+              <div>
+                <div class="template-box">
+                  <div class="template-label">Simple pattern</div>
+                  <p style="margin:0;">
+                    <strong>[Main variable] and [other variable] in [group] at [place]</strong><br />
+                    or<br />
+                    <strong>[Short action phrase]: A study in [group / place]</strong>
+                  </p>
+                </div>
+
+                <div class="example-block">
+                  <div class="example-label">Good examples</div>
+                  <ul class="clean">
+                    <li>“Phone Use And Sleep Quality In First-Year Students”</li>
+                    <li>“Diet And Blood Sugar Control In Adults With Type 2 Diabetes”</li>
+                    <li>“Teacher Burnout In Public Schools In City X”</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div>
+                <div class="example-block">
+                  <div class="example-label">Weak vs strong</div>
+                  <table>
+                    <tr>
+                      <th>Weak title</th>
+                      <th>Problem</th>
+                      <th>Better title</th>
+                    </tr>
+                    <tr>
+                      <td>“A Study Of Students”</td>
+                      <td>Too vague. What study? Which students?</td>
+                      <td>“Stress Levels In Final-Year Engineering Students”</td>
+                    </tr>
+                    <tr>
+                      <td>“Modern Issues In Health”</td>
+                      <td>Too wide. No clear group or variable.</td>
+                      <td>“Exercise Habits In Nurses Working Night Shifts”</td>
+                    </tr>
+                  </table>
+                </div>
+                <ul class="checklist">
+                  <li>No slang or jokes.</li>
+                  <li>Avoid rare acronyms. If you must use one, spell it first in the abstract.</li>
+                  <li>Do not try to be cute. Be clear.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Abstract -->
+        <details>
+          <summary>
+            <div class="summary-main">
+              <span class="summary-label">Part 2</span>
+              <span class="summary-title">Abstract</span>
+              <span class="summary-sub">Short summary, about 100–200 words.</span>
+            </div>
+            <span class="summary-icon">›</span>
+          </summary>
+          <div class="details-body">
+            <p>
+              The abstract is a mini-version of your whole proposal. Many reviewers read this first. Some may only read
+              this and skim the rest.
+            </p>
+
+            <div class="two-col">
+              <div>
+                <div class="template-box">
+                  <div class="template-label">Simple structure</div>
+                  <ol class="clean">
+                    <li><strong>Background:</strong> 1–2 lines about the problem.</li>
+                    <li><strong>Aim:</strong> 1 line with your main aim.</li>
+                    <li><strong>Methods:</strong> 2–3 lines on design, sample, tools, analysis.</li>
+                    <li><strong>Expected results / impact:</strong> 1–2 lines.</li>
+                  </ol>
+                </div>
+              </div>
+              <div>
+                <div class="example-block">
+                  <div class="example-label">Example abstract (phone & sleep)</div>
+                  <p style="margin:0;font-size:12px;">
+                    Many first-year students use smartphones late at night, which may harm sleep and learning.
+                    This study aims to examine the link between late-night phone use and sleep quality in first-year
+                    students at X University.
+                    We will conduct a cross-sectional survey of 300 students using a structured questionnaire on phone
+                    use and a standard sleep quality scale.
+                    Data will be analyzed using descriptive statistics and regression models.
+                    The findings are expected to help the university design better student support and awareness
+                    programs on healthy phone habits.
+                  </p>
+                </div>
+                <ul class="checklist">
+                  <li>Write the abstract last, when the rest is clear.</li>
+                  <li>Do not include new details that are not in the main text.</li>
+                  <li>Do not use references or long quotes here.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Introduction -->
+        <details>
+          <summary>
+            <div class="summary-main">
+              <span class="summary-label">Part 3</span>
+              <span class="summary-title">Introduction</span>
+              <span class="summary-sub">Problem, importance, aim, and objectives.</span>
+            </div>
+            <span class="summary-icon">›</span>
+          </summary>
+          <div class="details-body">
+            <div class="two-col">
+              <div>
+                <p><strong>Your goal:</strong> Make the reader care about the problem and see your clear aim.</p>
+                <ol class="clean">
+                  <li>Start wide: what general area is this (for example, sleep in students)?</li>
+                  <li>Move to your specific problem (late-night phone use and sleep).</li>
+                  <li>Show why this problem matters (health, learning, cost, etc.).</li>
+                  <li>State your main aim and clear objectives.</li>
+                </ol>
+                <div class="template-box">
+                  <div class="template-label">Aim & objectives pattern</div>
+                  <p style="margin:0;">
+                    <strong>Aim:</strong> To [main action] [main variables] in [group] at [place].<br /><br />
+                    <strong>Objectives:</strong><br />
+                    1. To measure …<br />
+                    2. To compare …<br />
+                    3. To find the association between … and …
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div class="example-block">
+                  <div class="example-label">Example introduction (short)</div>
+                  <p style="margin:0;font-size:12px;">
+                    Smartphone use has become common among university students.
+                    Many students use their phones late at night for social media, games, and videos.
+                    Late-night phone use may shorten sleep and reduce sleep quality.
+                    Poor sleep is linked with low grades, mood problems, and health issues.
+                    <br /><br />
+                    <strong>Aim:</strong> To examine the association between late-night phone use and sleep quality in
+                    first-year students at X University.
+                    <br /><br />
+                    <strong>Objectives:</strong>
+                    <br />
+                    1. To measure the level of late-night phone use in first-year students.<br />
+                    2. To assess sleep quality in the same group.<br />
+                    3. To study the association between late-night phone use and sleep quality.
+                  </p>
+                </div>
+                <ul class="checklist">
+                  <li>Keep it focused. Do not turn it into a full literature review.</li>
+                  <li>Put numbers only if they help (for example, “60% of students…” with a reference).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Background / literature -->
+        <details>
+          <summary>
+            <div class="summary-main">
+              <span class="summary-label">Part 4</span>
+              <span class="summary-title">Background / Literature</span>
+              <span class="summary-sub">Show what is already known and what is missing.</span>
+            </div>
+            <span class="summary-icon">›</span>
+          </summary>
+          <div class="details-body">
+            <p>
+              Here you show that you know the key work in your area, and that there is a gap your study will fill.
+            </p>
+            <div class="two-col">
+              <div>
+                <div class="template-box">
+                  <div class="template-label">Simple flow</div>
+                  <ol class="clean">
+                    <li>What the field knows in general (few key studies).</li>
+                    <li>What is known in your context or country (if any studies exist).</li>
+                    <li>What is missing (gap).</li>
+                    <li>How your study will help fill that gap.</li>
+                  </ol>
+                </div>
+                <div class="hint">
+                  Use recent, good-quality sources.
+                  You do not need every paper. Choose the most important ones.
+                </div>
+              </div>
+              <div>
+                <div class="example-block">
+                  <div class="example-label">Example gap statement</div>
+                  <p style="margin:0;font-size:12px;">
+                    Several studies in high-income countries have reported a link between late-night phone use and poor
+                    sleep among university students.
+                    However, little is known about this association in low- and middle-income settings.
+                    In country X, there are no published studies on late-night phone use and sleep among first-year
+                    university students.
+                    This study will address this gap by examining the association between late-night phone use and sleep
+                    quality in first-year students at X University.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Preliminary studies -->
+        <details>
+          <summary>
+            <div class="summary-main">
+              <span class="summary-label">Part 5</span>
+              <span class="summary-title">Preliminary work (if you have any)</span>
+              <span class="summary-sub">Show what you already tried and learned.</span>
+            </div>
+            <span class="summary-icon">›</span>
+          </summary>
+          <div class="details-body">
+            <p>
+              If you have done a small pilot or related work, show it briefly here.
+              This proves that your idea is practical and that you can do the study.
+            </p>
+            <div class="two-col">
+              <div>
+                <div class="example-block">
+                  <div class="example-label">Example: pilot survey</div>
+                  <p style="margin:0;font-size:12px;">
+                    A small pilot survey was conducted among 30 first-year students at X University to test the
+                    questionnaire.
+                    The pilot showed that students understood the items and could complete the survey in less than
+                    10 minutes.
+                    Based on the pilot, two items were rephrased to improve clarity.
+                    The pilot also suggested that about 70% of students used their phone after 11 pm.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <ul class="checklist">
+                  <li>Keep this section short and focused.</li>
+                  <li>Show only key findings that support your main study.</li>
+                  <li>If you have no preliminary work, you can skip this or say “No prior work was done.”</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Research methodology -->
+        <details>
+          <summary>
+            <div class="summary-main">
+              <span class="summary-label">Part 6</span>
+              <span class="summary-title">Research methodology</span>
+              <span class="summary-sub">Design, sample, tools, procedure, analysis, timeline.</span>
+            </div>
+            <span class="summary-icon">›</span>
+          </summary>
+          <div class="details-body">
+            <p>
+              This is the heart of your proposal.
+              A strong method section answers: what you will do, how you will do it, who you will include,
+              and how you will handle data and problems.
+            </p>
+
+            <div class="card-row">
+              <div class="card">
+                <div class="card-title">Key parts you must cover</div>
+                <ul class="clean">
+                  <li>Study design (for example, cross-sectional, cohort, experiment).</li>
+                  <li>Study setting (where the work happens).</li>
+                  <li>Study population and inclusion / exclusion rules.</li>
+                  <li>Sample size and how you calculated it.</li>
+                  <li>Sampling method (random, convenience, etc.).</li>
+                  <li>Data collection tools (questionnaires, lab tests, interviews).</li>
+                  <li>Data collection procedure (step-by-step).</li>
+                  <li>Data analysis plan (which tests, which software).</li>
+                  <li>Timeline.</li>
+                  <li>Possible problems and how you will handle them.</li>
+                </ul>
+              </div>
+
+              <div class="card card-soft-green">
+                <div class="card-title">Mini method example (phone & sleep)</div>
+                <p style="font-size:12px;margin:0;">
+                  <strong>Design:</strong> Cross-sectional survey.<br />
+                  <strong>Setting:</strong> X University, first-year classes.<br />
+                  <strong>Population:</strong> All first-year students enrolled in 2026.<br />
+                  <strong>Sample size:</strong> 300 students. Sample size was calculated using a 95% confidence level,
+                  5% margin of error, and an expected 50% prevalence of late-night phone use.<br />
+                  <strong>Sampling:</strong> Simple random sampling from the list of first-year students.<br />
+                  <strong>Tools:</strong> 1) Structured questionnaire on phone use. 2) Standard sleep quality scale.<br />
+                  <strong>Data collection:</strong> Data will be collected during class time after obtaining consent.
+                  Students will complete a paper or online survey in 10–15 minutes.<br />
+                  <strong>Analysis:</strong> Data will be entered into SPSS. Descriptive statistics will be used to
+                  summarize phone use and sleep quality.
+                  Chi-square tests and logistic regression will be used to assess the association between late-night
+                  phone use and poor sleep quality.<br />
+                  <strong>Timeline:</strong> Month 1–2: tool design and ethics approval.
+                  Month 3–4: data collection.
+                  Month 5–6: data analysis and report writing.
+                </p>
+              </div>
+            </div>
+
+            <div class="hint">
+              Avoid saying only “We will analyze the data”.
+              Always say <strong>how</strong> you will analyze it and with which tests or methods.
+            </div>
+          </div>
+        </details>
+
+        <!-- Budget -->
+        <details>
+          <summary>
+            <div class="summary-main">
+              <span class="summary-label">Part 7</span>
+              <span class="summary-title">Budget</span>
+              <span class="summary-sub">Money for people, tools, and support.</span>
+            </div>
+            <span class="summary-icon">›</span>
+          </summary>
+          <div class="details-body">
+            <p>
+              Your budget shows what the study will cost and why each cost is needed.
+              A clear budget also shows that you understand the real work and do not live in fantasy.
+            </p>
+
+            <div class="two-col">
+              <div>
+                <div class="card">
+                  <div class="card-title">Three main cost types</div>
+                  <table>
+                    <tr>
+                      <th>Type</th>
+                      <th>Meaning</th>
+                      <th>Examples</th>
+                    </tr>
+                    <tr>
+                      <td>Direct costs</td>
+                      <td>Money directly used for the study.</td>
+                      <td>Assistant salary, printing surveys, lab tests, travel to field sites.</td>
+                    </tr>
+                    <tr>
+                      <td>Subcontractor costs</td>
+                      <td>Money paid to another group you work with.</td>
+                      <td>Partner lab that runs blood tests, data center that stores data.</td>
+                    </tr>
+                    <tr>
+                      <td>Indirect costs</td>
+                      <td>Institution overhead for general support.</td>
+                      <td>Electricity, building use, admin support (set by your institution).</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div>
+                <div class="example-block">
+                  <div class="example-label">Tiny budget example (numbers are only sample)</div>
+                  <p style="margin:0;font-size:12px;">
+                    <strong>Direct costs:</strong><br />
+                    • Data collection assistant (6 months, part-time) – $2,000<br />
+                    • Printing questionnaires and posters – $200<br />
+                    • Gift vouchers for participants (300 × $3) – $900<br />
+                    • Software license (SPSS student license) – $300<br /><br />
+                    <strong>Subcontractor costs:</strong><br />
+                    • Not applicable (no external partners).<br /><br />
+                    <strong>Indirect costs:</strong><br />
+                    • 10% of total direct costs, as per university policy – $340<br /><br />
+                    <strong>Total budget requested: $3,740</strong>
+                  </p>
+                </div>
+                <ul class="checklist">
+                  <li>Include a short note that explains each line (“budget justification”).</li>
+                  <li>Follow the format given by the funder or university.</li>
+                  <li>Do not ask for items that are clearly not linked to the study.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- CV -->
+        <details>
+          <summary>
+            <div class="summary-main">
+              <span class="summary-label">Part 8</span>
+              <span class="summary-title">Your CV and team</span>
+              <span class="summary-sub">Show that the right people are in place.</span>
+            </div>
+            <span class="summary-icon">›</span>
+          </summary>
+          <div class="details-body">
+            <p>
+              Many proposals ask for a brief academic CV for the main person and maybe for co-workers.
+            </p>
+            <div class="card-row">
+              <div class="card">
+                <div class="card-title">What to show</div>
+                <ul class="clean">
+                  <li>Your education (degrees, year, place).</li>
+                  <li>Past research work or thesis.</li>
+                  <li>Skills that match this study (for example, statistics, lab skills).</li>
+                  <li>Any papers, posters, or talks.</li>
+                </ul>
+              </div>
+              <div class="card card-soft-green">
+                <div class="card-title">Mini example</div>
+                <p style="margin:0;font-size:12px;">
+                  <strong>Name:</strong> A. Student<br />
+                  <strong>Current role:</strong> PhD candidate, Department of Public Health, X University.<br />
+                  <strong>Education:</strong> MPH, 2024, X University.<br />
+                  <strong>Experience:</strong> Assisted in a cross-sectional study on stress in medical students.
+                  Completed a thesis on “Social media use and anxiety in undergraduates”.<br />
+                  <strong>Skills:</strong> SPSS, survey design, basic regression analysis.<br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Appendix -->
+        <details>
+          <summary>
+            <div class="summary-main">
+              <span class="summary-label">Part 9</span>
+              <span class="summary-title">Appendix</span>
+              <span class="summary-sub">Extra support items only.</span>
+            </div>
+            <span class="summary-icon">›</span>
+          </summary>
+          <div class="details-body">
+            <p>Use this section only if allowed. It holds extra pieces that support your main text.</p>
+            <ul class="clean">
+              <li>Letters of support from partners.</li>
+              <li>Permission letters from hospitals or schools.</li>
+              <li>Draft questionnaires or interview guides.</li>
+              <li>Gantt chart or detailed timeline.</li>
+            </ul>
+            <div class="hint">
+              Do not hide key information in the appendix.
+              Anything vital (like methods) must also appear in the main body.
+            </div>
+          </div>
+        </details>
+
+        <!-- Human subjects / ethics -->
+        <details>
+          <summary>
+            <div class="summary-main">
+              <span class="summary-label">Part 10</span>
+              <span class="summary-title">Ethics and human / animal subjects</span>
+              <span class="summary-sub">Show that your work is safe and respectful.</span>
+            </div>
+            <span class="summary-icon">›</span>
+          </summary>
+          <div class="details-body">
+            <p>
+              If your study involves people or animals, you must explain how you protect them and follow rules.
+            </p>
+            <div class="two-col">
+              <div>
+                <div class="card">
+                  <div class="card-title">Key points to include</div>
+                  <ul class="clean">
+                    <li>Which ethics body will review the study.</li>
+                    <li>How you will get informed consent.</li>
+                    <li>How you will keep data private and safe.</li>
+                    <li>How you will reduce risk or harm.</li>
+                    <li>How you will allow people to stop at any time.</li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <div class="example-block">
+                  <div class="example-label">Example ethics paragraph</div>
+                  <p style="margin:0;font-size:12px;">
+                    Ethical approval will be obtained from the Institutional Review Board of X University before data
+                    collection.
+                    Written informed consent will be taken from all participants.
+                    Participation will be voluntary, and students may withdraw at any time without any effect on their
+                    grades.
+                    No names will be recorded on the questionnaire.
+                    Data will be stored in password-protected files, and only the research team will have access.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <div class="back-to-top"><a href="#top">Back to top</a></div>
+      </section>
+
+      <!-- Section: Budget & team already done, but add timeline and problem handling -->
+      <section id="section-budget-team">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Planning</div>
+            <h2 class="section-title">Timeline and problem-handling plan</h2>
+          </div>
+          <div class="section-note">Reviewers like clear time lines and honest risk plans.</div>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <div class="card card-soft-yellow">
+              <div class="card-title">Simple timeline (Gantt-style in words)</div>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-title">Months 1–2: Planning</div>
+                  <div class="timeline-text">
+                    Refine questions, build tools, apply for ethics, pilot test the questionnaire.
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-title">Months 3–4: Data collection</div>
+                  <div class="timeline-text">
+                    Recruit sample, collect surveys, check data quality.
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-title">Months 5–6: Analysis</div>
+                  <div class="timeline-text">
+                    Clean data, run analysis, make tables and graphs.
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-title">Months 7–8: Write-up</div>
+                  <div class="timeline-text">
+                    Write report, draft paper, share with supervisor and team.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card card-soft-green">
+              <div class="card-title">Plan for common problems</div>
+              <ul class="clean">
+                <li><strong>Low response rate:</strong> Plan extra reminders and more classes to include.</li>
+                <li><strong>Missing data:</strong> Decide how you will handle incomplete forms in advance.</li>
+                <li><strong>Time delays:</strong> Keep buffer time in your timeline.</li>
+                <li><strong>Team changes:</strong> Name a backup person if one assistant leaves.</li>
+              </ul>
+              <div class="example-block">
+                <div class="example-label">Example line in proposal</div>
+                <p style="margin:0;font-size:12px;">
+                  To manage possible low response, we will send reminders through class representatives and email.
+                  We will also plan to invite 20% more students than the required sample size.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="back-to-top"><a href="#top">Back to top</a></div>
+      </section>
+
+      <!-- Section: Writing tips -->
+      <section id="section-writing">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Style & layout</div>
+            <h2 class="section-title">How to write so reviewers do not get tired</h2>
+          </div>
+          <div class="section-note">This covers structure, language, and visual layout.</div>
+        </div>
+
+        <div class="card-row">
+          <div class="card">
+            <div class="card-title">Use clear structure</div>
+            <ul class="checklist">
+              <li>Use headings and sub-headings (like “3.1 Study design”).</li>
+              <li>Use bullet points instead of long thick paragraphs when possible.</li>
+              <li>Use short sentences. Keep most under 20 words.</li>
+            </ul>
+          </div>
+
+          <div class="card card-soft-yellow">
+            <div class="card-title">Use visuals wisely</div>
+            <ul class="clean">
+              <li>Tables to show budgets or comparisons.</li>
+              <li>Simple diagrams to show study flow (for example, “Invite → Consent → Survey → Analysis”).</li>
+              <li>Do not add complex charts just to look smart.</li>
+            </ul>
+            <div class="hint">
+              Every visual must make reading <strong>easier</strong>, not harder.
+            </div>
+          </div>
+
+          <div class="card card-soft-green">
+            <div class="card-title">Avoid weak words</div>
+            <ul class="xlist checklist">
+              <li>“We might do…” → say “We will do…”.</li>
+              <li>“It appears that maybe…” → say “We expect that…”.</li>
+              <li>“We hope to consider…” → say “We plan to measure…”.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:10px;">
+          <div class="card-title">Before you submit: language and layout test</div>
+          <div class="two-col">
+            <div>
+              <ul class="checklist">
+                <li>Run spell-check and grammar check.</li>
+                <li>Ask one friend outside your field to read the abstract:
+                  if they are confused, fix it.</li>
+                <li>Check that font, spacing, and heading style are the same everywhere.</li>
+              </ul>
+            </div>
+            <div>
+              <ul class="checklist">
+                <li>Page numbers are in order, no missing pages.</li>
+                <li>All tables and figures are named and referenced in the text.</li>
+                <li>Follow all formatting rules from the funder or school (margins, font size, word limits).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="back-to-top"><a href="#top">Back to top</a></div>
+      </section>
+
+      <!-- Section: Reasons for rejection -->
+      <section id="section-reject">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Red flags</div>
+            <h2 class="section-title">Why good-looking proposals still get rejected</h2>
+          </div>
+          <div class="section-note">Each red flag with a fix and a short example.</div>
+        </div>
+
+        <div class="flag-board">
+          <div class="flag">
+            <div class="flag-badge">Red flag 1</div>
+            <div class="flag-title">Problem is too small or not useful</div>
+            <p style="font-size:13px;">
+              If your question will not change anything important, reviewers may drop it.
+            </p>
+            <ul class="clean">
+              <li><strong>Bad:</strong> “Do students like blue or red pens more?”</li>
+              <li><strong>Better:</strong> “Does handwriting tool (pen vs tablet) affect note-taking quality and grades?”</li>
+            </ul>
+          </div>
+
+          <div class="flag">
+            <div class="flag-badge">Red flag 2</div>
+            <div class="flag-title">Aim is unclear or too wide</div>
+            <p style="font-size:13px;">
+              “To study health in students” is not a clear aim.
+              It is too broad and shows no focus.
+            </p>
+            <ul class="clean">
+              <li><strong>Fix:</strong> Narrow it. “To assess depression levels and related factors in first-year students.”</li>
+            </ul>
+          </div>
+
+          <div class="flag">
+            <div class="flag-badge">Red flag 3</div>
+            <div class="flag-title">Methods do not match aims</div>
+            <p style="font-size:13px;">
+              You want to test cause and effect but choose a weak design.
+            </p>
+            <ul class="clean">
+              <li><strong>Bad:</strong> Aim: “To test if a new app causes weight loss.”
+                Method: one-time cross-sectional survey.</li>
+              <li><strong>Better:</strong> Use a trial design or at least before-after study.</li>
+            </ul>
+          </div>
+
+          <div class="flag">
+            <div class="flag-badge">Red flag 4</div>
+            <div class="flag-title">Weak or no statistics plan</div>
+            <p style="font-size:13px;">
+              Saying “We will analyze the data” is not enough.
+            </p>
+            <ul class="clean">
+              <li><strong>Fix:</strong> Name tests (for example, chi-square, t-test, regression).
+                Say which variables are dependent / independent.</li>
+            </ul>
+          </div>
+
+          <div class="flag">
+            <div class="flag-badge">Red flag 5</div>
+            <div class="flag-title">Poor writing and errors</div>
+            <p style="font-size:13px;">
+              Many grammar mistakes, missing pages, or random fonts make reviewers think:
+              “This person may not manage a full study.”
+            </p>
+            <ul class="clean">
+              <li><strong>Fix:</strong> Proof-read, use a simple style, and follow one format from start to end.</li>
+            </ul>
+          </div>
+
+          <div class="flag">
+            <div class="flag-badge">Red flag 6</div>
+            <div class="flag-title">Too many elements in one study</div>
+            <p style="font-size:13px;">
+              Trying to measure every possible variable in one PhD can sink you.
+            </p>
+            <ul class="clean">
+              <li><strong>Fix:</strong> Focus on a few main variables. You can always plan extra studies later.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="back-to-top"><a href="#top">Back to top</a></div>
+      </section>
+
+      <!-- Section: Checklists -->
+      <section id="section-checklists">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Quick tools</div>
+            <h2 class="section-title">Three simple checklists you can tick before submission</h2>
+          </div>
+          <div class="section-note">Use these as last-minute guards.</div>
+        </div>
+
+        <div class="card-row">
+          <div class="card card-soft-yellow">
+            <div class="card-title">Checklist 1: Content</div>
+            <ul class="checklist">
+              <li>Clear title, abstract, introduction, background.</li>
+              <li>Aim and objectives are specific and match methods.</li>
+              <li>Methods fully describe who, where, what, how, when.</li>
+              <li>Budget and timeline are realistic.</li>
+              <li>Ethics and consent are covered where needed.</li>
+            </ul>
+          </div>
+
+          <div class="card card-soft-green">
+            <div class="card-title">Checklist 2: Logic</div>
+            <ul class="checklist">
+              <li>Background logically leads to the research gap.</li>
+              <li>Gap clearly leads to aim and objectives.</li>
+              <li>Objectives are answered by your methods.</li>
+              <li>Expected results and impact fit your aims.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Checklist 3: Reader experience</div>
+            <ul class="checklist">
+              <li>Headings guide the reader through the text.</li>
+              <li>No paragraph is longer than half a page.</li>
+              <li>Tables and figures are easy to read and not crowded.</li>
+              <li>No lazy phrases: “etc.”, “and so on”, “many things”.</li>
+              <li>Rules from the funder or university are followed exactly.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="back-to-top"><a href="#top">Back to top</a></div>
+      </section>
+
+      <!-- Section: Mini full example -->
+      <section id="section-mini-example">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Walk-through</div>
+            <h2 class="section-title">From idea to mini proposal: full simple example</h2>
+          </div>
+          <div class="section-note">Same topic used across parts so you can see the flow.</div>
+        </div>
+
+        <div class="card">
+          <div class="card-label">Topic</div>
+          <div class="card-title">Late-night phone use and sleep quality in first-year students</div>
+          <div class="card-body">
+            <ol class="clean">
+              <li><strong>Title:</strong> Phone Use And Sleep Quality In First-Year Students At X University.</li>
+              <li>
+                <strong>Abstract (short):</strong>
+                You write 100–150 words like the earlier example, touching on problem, aim, methods, expected impact.
+              </li>
+              <li>
+                <strong>Introduction:</strong>
+                You explain that phone use is high, sleep is important, and you state your aim and three objectives.
+              </li>
+              <li>
+                <strong>Background:</strong>
+                You show a few key papers from other countries, note that your country or university has no such study,
+                and state the gap.
+              </li>
+              <li>
+                <strong>Method:</strong>
+                You describe your cross-sectional survey, sample, tools, data collection, and analysis plan.
+              </li>
+              <li>
+                <strong>Budget:</strong>
+                You list costs for assistant, printing, software, and small gifts, plus indirect costs if needed.
+              </li>
+              <li>
+                <strong>Ethics:</strong>
+                You show how you will protect student privacy and get consent.
+              </li>
+              <li>
+                <strong>Conclusion:</strong>
+                You state that results will help the university decide on support programs for healthy phone use and
+                sleep.
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card card-soft-yellow" style="margin-top:10px;">
+          <div class="card-title">Try it with your own topic</div>
+          <p style="font-size:13px;">
+            Pick your topic now and write one sentence for each part:
+          </p>
+          <ol class="clean">
+            <li>My title is: “_____”.</li>
+            <li>My problem in one line is: “_____”.</li>
+            <li>My main aim is: “To _____ in _____.”</li>
+            <li>My main method is: “I will use _____ design with _____ participants.”</li>
+            <li>My main tools are: “_____ and _____.”</li>
+            <li>My main analysis is: “I will use _____ tests.”</li>
+            <li>My main benefit is: “This will help _____ to _____.”</li>
+          </ol>
+        </div>
+
+        <div class="back-to-top"><a href="#top">Back to top</a></div>
+      </section>
+
+      <!-- Section: Final 10-minute check -->
+      <section id="section-final-check">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Last step</div>
+            <h2 class="section-title">10-minute final check before you send</h2>
+          </div>
+          <div class="section-note">Fast but strict.</div>
+        </div>
+
+        <div class="card-row">
+          <div class="card">
+            <div class="card-title">1. Alignment check</div>
+            <ul class="checklist">
+              <li>Title matches your aim and main variables.</li>
+              <li>Aim and objectives match your methods and analysis.</li>
+              <li>Expected impact matches your problem and target group.</li>
+            </ul>
+          </div>
+
+          <div class="card card-soft-green">
+            <div class="card-title">2. Reader test</div>
+            <ul class="checklist">
+              <li>Read your abstract out loud.
+                If you run out of breath, sentence is too long.</li>
+              <li>Check that every page looks clean, with enough margin and spacing.</li>
+              <li>Check that each section starts with a clear heading.</li>
+            </ul>
+          </div>
+
+          <div class="card card-soft-yellow">
+            <div class="card-title">3. Honesty check</div>
+            <ul class="checklist">
+              <li>Is your sample size realistic for your time and budget?</li>
+              <li>Are your skills enough for the planned methods? If not, have you added support from someone?</li>
+              <li>Have you clearly said what could go wrong and how you will respond?</li>
+            </ul>
+          </div>
+        </div>
+
+        <footer>
+          <div>Once you can tick most of the boxes in this guide, your proposal is much closer to a strong “yes”.</div>
+          <div class="quick-links">
+            <a class="quick-link" href="#section-format">Jump back to parts list</a>
+            <a class="quick-link" href="#section-mini-example">Re-read full example</a>
+            <a class="quick-link" href="#top">Scroll to top</a>
+          </div>
+        </footer>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
