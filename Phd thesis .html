@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>PhD Ultimate Deep Guide — Methodology, Results & Conclusion</title>
+<meta name="description" content="Extremely detailed, teacher-style guide for PhD methodology, results and conclusion. Granular subheadings, deep explanations, examples, responsive UI."/>
+<style>
+  :root{
+    --bg:#071427; --panel:#0b2334; --card:#0e2736; --muted:#9fb3c6; --accent:#06b6d4;
+    --accent2:#f59e0b; --text:#e8f9ff; --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Courier New", monospace;
+    --maxw:1200px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;color:var(--text);background:linear-gradient(180deg,#041225 0%, #071427 100%);}
+  a{color:inherit}
+  .wrap{max-width:var(--maxw);margin:18px auto;padding:18px}
+  header{display:flex;gap:14px;align-items:center}
+  .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:900;color:#022}
+  h1{margin:0;font-size:22px}
+  .subtitle{color:var(--muted);margin-top:6px;font-size:13px}
+  .outer{display:grid;grid-template-columns:320px 1fr;gap:18px;margin-top:18px}
+  nav{position:sticky;top:18px;padding:14px;border-radius:12px;background:var(--panel);border:1px solid rgba(255,255,255,0.03);height:fit-content}
+  nav h3{margin:0 0 8px 0;font-size:13px;color:var(--muted)}
+  nav a{display:block;padding:8px;border-radius:8px;text-decoration:none;color:var(--text);font-weight:700;margin-bottom:6px}
+  nav a:hover{background:rgba(255,255,255,0.02)}
+  main{background:linear-gradient(180deg,#071226,#06141c);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+  section{margin-bottom:20px}
+  h2{font-size:20px;margin:0 0 8px 0;color:var(--accent)}
+  h3{font-size:16px;margin:10px 0;color:var(--text)}
+  p{margin:8px 0;color:var(--text);line-height:1.6;font-size:15px}
+  .muted{color:var(--muted);font-size:13px}
+  .card{background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+  .panel{background:linear-gradient(90deg, rgba(6,182,212,0.03), rgba(59,130,246,0.02));padding:14px;border-radius:8px;border-left:4px solid var(--accent);color:#eafcff}
+  .warn{background:linear-gradient(90deg, rgba(245,158,11,0.03), rgba(59,130,246,0.02));padding:12px;border-radius:8px;border-left:4px solid var(--accent2);color:#fff6e8}
+  pre.code{background:#021421;padding:12px;border-radius:8px;font-family:var(--mono);font-size:13px;overflow:auto;border:1px solid rgba(255,255,255,0.03);color:#bfeefb}
+  table{width:100%;border-collapse:collapse;margin-top:8px}
+  th,td{padding:8px;border:1px solid rgba(255,255,255,0.03);text-align:left;font-size:14px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);font-weight:700;color:var(--text);font-size:13px;margin-right:6px}
+  .cta{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+  .btn{background:var(--accent);color:#042026;padding:8px 12px;border-radius:8px;border:none;font-weight:800;cursor:pointer}
+  details{background:transparent;border-radius:8px;margin-bottom:8px}
+  summary{cursor:pointer;padding:10px 12px;list-style:none;border-radius:8px;background:rgba(255,255,255,0.01);font-weight:800}
+  details[open] summary{background:rgba(255,255,255,0.02)}
+  details p{padding:8px 12px;margin:0;color:var(--muted)}
+  .copy-row{display:flex;justify-content:flex-end;margin-top:8px}
+  .copy-btn{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);color:var(--text);padding:6px 8px;border-radius:6px;font-weight:700;cursor:pointer}
+  /* print */
+  @media print{
+    nav, .btn, .copy-btn {display:none}
+    body,main{background:white;color:black}
+  }
+  /* responsive */
+  @media (max-width:980px){
+    .outer{grid-template-columns:1fr}
+    nav{position:relative}
+    .two{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">PH</div>
+    <div>
+      <h1>PhD thesis writing short Guide-How to Write Your Methodology,
+Results and Conclusion</h1>
+      <div class="subtitle muted">Complete, long-form teacher explanations under every subheading. Mobile + desktop responsive. No shortcuts. Read, copy, paste, finish your thesis chapters.</div>
+    </div>
+  </header>
+
+  <div class="outer">
+    <nav aria-label="Guide Navigation" class="card">
+      <h3>Contents</h3>
+      <a href="#overview">Overview — how to use</a>
+      <a href="#problem">Research problem & objectives</a>
+      <a href="#questions">Research questions & hypotheses</a>
+      <a href="#paradigm">Paradigm & method logic</a>
+      <a href="#design">Study design & threats to validity</a>
+      <a href="#variables">Variables & operationalization</a>
+      <a href="#sampling">Population, sampling & sample-size logic</a>
+      <a href="#instruments">Instruments: design & item-level logic</a>
+      <a href="#pilot">Pilot, content validity & reliability</a>
+      <a href="#collection">Data collection: practical protocol</a>
+      <a href="#ethics">Ethics, consent & confidentiality</a>
+      <a href="#datamanage">Data management & reproducibility</a>
+      <a href="#cleaning">Data cleaning, outliers & missing</a>
+      <a href="#descript">Descriptive analysis & visuals</a>
+      <a href="#inferential">Inferential tests: when and why</a>
+      <a href="#assumptions">Assumption checks & effect sizes</a>
+      <a href="#regression">Regression & causal logic</a>
+      <a href="#qual">Qualitative coding & theme building</a>
+      <a href="#triang">Triangulation & mixed-methods integration</a>
+      <a href="#results">Results chapter — exact structure</a>
+      <a href="#discussion">Discussion — paragraph-by-paragraph</a>
+      <a href="#conclusion">Conclusion — how to craft it</a>
+      <a href="#final">Final checklist & common errors</a>
+    </nav>
+
+    <main>
+      <!-- OVERVIEW -->
+      <section id="overview" class="card">
+        <h2>Overview — how to read and use this guide</h2>
+        <p>This document is a teacher speaking to a PhD student. Each subheading is the backbone of your Methods, Results and Conclusion chapters. Under each heading you will find:</p>
+        <ul class="muted">
+          <li>A clear definition in plain words</li>
+          <li>Why it matters for your thesis</li>
+          <li>Exact steps or text you can copy into your thesis</li>
+          <li>Concrete example(s) with numbers when helpful</li>
+          <li>Common pitfalls and how to avoid them</li>
+        </ul>
+        <p>Do not skim. Copy the text sections that match your study, edit names and numbers, and paste them into your thesis draft. This guide is intentionally long. That is required for PhD-level depth.</p>
+      </section>
+
+      <!-- PROBLEM -->
+      <section id="problem" class="card">
+        <h2>Research problem & objectives</h2>
+
+        <h3>Define the research problem (exact paragraph)</h3>
+        <p>Write 3–5 sentences that: name the issue, locate it in a context (who/where), explain why it matters (impact), and highlight the gap in knowledge your study will fill. Keep it tight and concrete.</p>
+
+        <div class="panel">
+          <strong>Exact text you can adapt:</strong>
+          <p>"Many undergraduate students in blended-learning programs report a decline in sustained academic engagement during online segments. Reduced engagement leads to poorer completion rates and lower grades, which harms student progression and institutional outcomes. Existing studies document engagement trends but do not test structured, short-term interventions that combine multimedia and guided peer tasks. This study assesses whether a structured multimedia module increases student motivation and explores how students experience the module."</p>
+        </div>
+
+        <h3>Why the problem paragraph matters</h3>
+        <p>This paragraph sets expectations. Examiners use it to judge whether your methods and results align with the stated problem. If the problem is vague, your methods will look mis-matched. Be explicit about population and outcome.</p>
+
+        <h3>Study objectives (clear, numbered)</h3>
+        <p>Follow the problem paragraph with 2–4 numbered objectives. Each objective maps to a research question.</p>
+
+        <div class="panel">
+          <strong>Example objectives</strong>
+          <ol>
+            <li>Quantify change in student motivation after the 8-week module.</li>
+            <li>Identify module elements associated with higher motivation scores.</li>
+            <li>Explain student experiences that underpin observed changes using interviews.</li>
+          </ol>
+        </div>
+
+        <h3>Pitfalls</h3>
+        <ul class="muted">
+          <li>Vague problem (e.g., "students struggle") without scope or impact.</li>
+          <li>Mismatch between problem and objectives (objectives should solve the problem).</li>
+        </ul>
+      </section>
+
+      <!-- QUESTIONS -->
+      <section id="questions" class="card">
+        <h2>Research questions & hypotheses</h2>
+
+        <h3>Research questions — how to write</h3>
+        <p>Write closed, answerable questions for quantitative parts, and open questions for qualitative exploration. Keep language specific: which group, what outcome, over what time.</p>
+
+        <div class="panel">
+          <strong>Good RQ examples</strong>
+          <ol>
+            <li>Does the multimedia module increase student motivation measured by a standard 10-item scale after eight weeks?</li>
+            <li>Which module elements (structure, peer tasks, feedback) predict the largest change in motivation?</li>
+            <li>How do students describe the changes in their learning habits after completing the module?</li>
+          </ol>
+        </div>
+
+        <h3>Hypotheses — when and exactly how</h3>
+        <p>For testable RQs, write hypotheses with direction and short rationale. Keep each hypothesis as one sentence. Add a one-sentence theoretical or empirical justification below each hypothesis.</p>
+
+        <div class="panel">
+          <strong>Example</strong>
+          <p><strong>H1:</strong> Student motivation scores will be higher after the module than before (paired samples).<br>
+          <strong>Rationale:</strong> Structured tasks increase perceived competence, which by self-determination theory increases intrinsic motivation.</p>
+        </div>
+
+        <h3>Pitfalls</h3>
+        <ul class="muted">
+          <li>Hypotheses that are not falsifiable or not linked to measures</li>
+          <li>Too many RQs — keep them lean (3–6 max)</li>
+        </ul>
+      </section>
+
+      <!-- PARADIGM -->
+      <section id="paradigm" class="card">
+        <h2>Paradigm & methods logic</h2>
+
+        <h3>State the research paradigm in one sentence</h3>
+        <p>Choose one: positivist, interpretivist, realist, or pragmatist. State it and justify in one sentence. Avoid long philosophical discussions — examiners want clarity and fit with methods.</p>
+
+        <div class="panel">
+          <strong>Example:</strong>
+          <p>"This study adopts a pragmatist paradigm because it uses quantitative measures to test effect and qualitative methods to explain mechanisms."</p>
+        </div>
+
+        <h3>Methods vs methodology — write this paragraph</h3>
+        <p>Write two short paragraphs: first explain methodology (why the approach fits the question), second list the methods (what you did) with a roadmap of the chapter.</p>
+
+        <div class="panel">
+          <strong>Example text:</strong>
+          <p>Methodology: A mixed-methods approach is selected to provide both robust estimates of effect and rich accounts of participant experience. Methods: an online pre-post survey measured motivation change; semi-structured interviews explored student experiences; quantitative and qualitative results are integrated in the discussion.</p>
+        </div>
+
+        <h3>Why this matters</h3>
+        <p>The paradigm paragraph signals to examiners what counts as evidence in your thesis. Make sure later chapters follow this standard.</p>
+      </section>
+
+      <!-- DESIGN -->
+      <section id="design" class="card">
+        <h2>Study design & threats to validity</h2>
+
+        <h3>Choose the right design and explain trade-offs</h3>
+        <p>Be explicit: randomized experiment, quasi-experimental (e.g., pre-post with non-equivalent groups), cross-sectional, longitudinal, case study, or ethnography. For each choice explain advantages and unavoidable limitations. If you cannot randomize, say why and describe the steps you took to reduce bias.</p>
+
+        <div class="panel">
+          <strong>Step-by-step design paragraph to copy:</strong>
+          <p>The design is a quasi-experimental pre-post study. Random assignment to module was not possible because classes were scheduled by the department. To reduce selection bias we used stratified sampling and controlled for prior GPA and attendance in multivariable models. Qualitative interviews were purposively sampled to explain mechanisms.</p>
+        </div>
+
+        <h3>Threats to validity — list and mitigation</h3>
+        <p>List the common threats and how you addressed them. Use short headings and a one-line mitigation for each.</p>
+
+        <table>
+          <thead><tr><th>Threat</th><th>Meaning</th><th>Mitigation</th></tr></thead>
+          <tbody>
+            <tr><td>Selection bias</td><td>Groups differ before treatment</td><td>Stratified sampling and control variables</td></tr>
+            <tr><td>History</td><td>External events change outcomes</td><td>Document timeline and check for concurrent events</td></tr>
+            <tr><td>Maturation</td><td>Participants change naturally over time</td><td>Shorten follow-up and use control/comparison when possible</td></tr>
+            <tr><td>Instrumentation</td><td>Measurement changes over time</td><td>Use same instrument and standard procedures</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Phasing & timeline</h3>
+        <p>Show the exact schedule and minimum windows for each activity. If you must do rolling recruitment, explain why and how you handle timing differences in analysis (e.g., adjust for week of enrolment).</p>
+
+        <div class="code" style="background:#021825;color:#bfeffb;padding:10px;border-radius:6px;">
+          <strong>Example timeline (short):</strong><br>
+          Instrument design: 2 weeks | Pilot: 2 weeks | Baseline: 1 week | Intervention: 8 weeks | Post-test & interviews: 2 weeks | Analysis: 4 weeks
+        </div>
+      </section>
+
+      <!-- VARIABLES -->
+      <section id="variables" class="card">
+        <h2>Variables & operationalization (detailed)</h2>
+
+        <h3>Full variable specification: what to include</h3>
+        <p>For each variable include: variable name, label, type, unit/scale, valid range, coding values for categorical variables, how missing values are encoded, and if composite — formula to compute it. This level of detail belongs in the methods chapter because it ensures reproducibility.</p>
+
+        <div class="panel">
+          <strong>Example variable write-up</strong>
+          <p><strong>Variable:</strong> motivation_pre_score<br>
+          <strong>Label:</strong> Motivation before intervention<br>
+          <strong>Type:</strong> continuous (numeric)<br>
+          <strong>Scale:</strong> mean of 10 items, each 1–5<br>
+          <strong>Missing handling:</strong> allowed up to 1 missing item; if more missing set to NA</p>
+        </div>
+
+        <h3>Operational decisions that matter</h3>
+        <ul class="muted">
+          <li>How you compute a scale when items are missing</li>
+          <li>Whether you transform variables (log, z-score); show formulas and reasoning</li>
+          <li>How you collapse categories in demographics (e.g., combine small groups)</li>
+        </ul>
+
+        <h3>Pitfalls</h3>
+        <p>Not documenting coding choices leads to difficulty reproducing results and reviewer criticism. Provide exact formulas or code snippets (R/SPSS) in your methods text or a short code appendix.</p>
+      </section>
+
+      <!-- SAMPLING -->
+      <section id="sampling" class="card">
+        <h2>Population, sampling frame & sample-size logic (deep)</h2>
+
+        <h3>Population and frame — be explicit</h3>
+        <p>Define the target population (who you want to generalize to) and the sampling frame (the list you actually sampled from). The frame must be described so readers judge external validity.</p>
+
+        <div class="panel">
+          <strong>Example:</strong>
+          <p>Target population: all third-year undergraduate students at University X in the 2024 academic year. Sampling frame: the university's course enrolment list for Semester 1, 2024 (N=1,200).</p>
+        </div>
+
+        <h3>Sampling method — justify it</h3>
+        <p>Explain why you used simple random, stratified random, cluster, purposive, or convenience sampling. Link the choice to feasibility and bias trade-offs.</p>
+
+        <h3>Sample-size calculation — show your math</h3>
+        <p>For quantitative hypotheses include power calculation inputs: alpha, power, effect size (use literature or pilot to pick effect), test type. For qualitative explain the saturation logic and target range.</p>
+
+        <div class="panel">
+          <strong>Sample-size worked example (paired t-test)</strong>
+          <p>Inputs: alpha = 0.05, power = 0.80, effect size d = 0.5 (medium). Using standard tables or G*Power, required N ≈ 34 per group (paired). Practical target N = 120 to allow subgroup analysis and attrition.</p>
+        </div>
+
+        <h3>Recruitment yield and response rate</h3>
+        <p>Report numbers: invited, responded, completed. Show the flow of participants using a short consort-style paragraph or a small table. If attrition exists, compare baseline characteristics of completers vs non-completers.</p>
+
+        <h3>Pitfalls</h3>
+        <ul class="muted">
+          <li>Reporting only final N without showing recruitment flow</li>
+          <li>Using convenience sampling but claiming representativeness</li>
+        </ul>
+      </section>
+
+      <!-- INSTRUMENTS -->
+      <section id="instruments" class="card">
+        <h2>Instruments: design, item-level logic, and measurement quality</h2>
+
+        <h3>Questionnaire construction — step-by-step</h3>
+        <ol>
+          <li>Define constructs and number of items per construct (usually 4–12).</li>
+          <li>Draft simple item stems; avoid double-barrels and leading wording.</li>
+          <li>Choose consistent response format (Likert 1–5 or 1–7) and label endpoints.</li>
+          <li>Pilot items for comprehension and time to complete.</li>
+          <li>Revise items based on pilot and expert feedback.</li>
+        </ol>
+
+        <h3>Scale design considerations</h3>
+        <p>Balance detail and fatigue. More items increase reliability but also burden. Use reverse-coded items sparingly and explain scoring rules precisely (list reverse items and show formula to compute total/mean).</p>
+
+        <h3>Interview and observation design</h3>
+        <p>For interviews provide a topic guide and probing approach. For observation, provide explicit coding categories and scoring rubric, and show how observers were trained and reliability tested.</p>
+
+        <div class="panel">
+          <strong>Item example and logic</strong>
+          <p>Item: "I found the module activities clear and easy to follow." (1 = strongly disagree, 5 = strongly agree). This item measures perceived clarity, which theory suggests influences competence and thus motivation.</p>
+        </div>
+
+        <h3>Pitfalls</h3>
+        <ul class="muted">
+          <li>Mixing past and present tense in items (confusing to respondents)</li>
+          <li>Too many similar items that increase boredom and straight-lining</li>
+        </ul>
+      </section>
+
+      <!-- PILOT -->
+      <section id="pilot" class="card">
+        <h2>Pilot testing, content validity & reliability (in depth)</h2>
+
+        <h3>Pilot test procedure</h3>
+        <p>Select pilot participants similar to the sample. Run the full instrument. Collect timing, comprehension notes, and item-level feedback. Use both closed responses and open feedback about confusing items. Keep a log of changes made after pilot and why.</p>
+
+        <h3>Content validity via expert review</h3>
+        <p>Have 2–5 domain experts rate items for relevance and clarity. Summarize ratings and note items dropped or changed. Record a short justification for each change in your methods text.</p>
+
+        <h3>Construct validity and factor analysis</h3>
+        <p>Run exploratory factor analysis (EFA) in pilot or initial sample to check whether items cluster as expected. Report KMO measure and Bartlett’s test briefly, and show loadings only for key items in the text.</p>
+
+        <h3>Reliability — Cronbach's alpha and beyond</h3>
+        <p>Report Cronbach’s alpha for each multi-item scale. If alpha < 0.7 consider removing problematic items or acknowledging multi-dimensionality. For qualitative reliability (coding), report inter-coder agreement (Cohen’s kappa) and how disagreements were resolved.</p>
+
+        <div class="panel">
+          <strong>Example reporting snippet</strong>
+          <p>Pilot (n = 25). Experts (n = 3) reviewed items and recommended removing 2 items due to ambiguity. EFA on pilot supported a single-factor solution (KMO = 0.78, first factor explained 45% variance). Final motivation scale (10 items) Cronbach's alpha = 0.84.</p>
+        </div>
+
+        <h3>Pitfalls</h3>
+        <ul class="muted">
+          <li>Using pilot n too small to draw factor conclusions but reporting them as definitive</li>
+          <li>Ignoring item-level feedback and keeping confusing wording</li>
+        </ul>
+      </section>
+
+      <!-- COLLECTION -->
+      <section id="collection" class="card">
+        <h2>Data collection — full, audit-ready protocol</h2>
+
+        <h3>Standard operating procedure (SOP) — what to write</h3>
+        <p>Write an SOP paragraph that includes: who invited participants, exact invite text (short), consent procedure, where data were collected (online form name; in-person room), dates, how interviews were scheduled and recorded, and how many reminder waves were sent. This SOP should be reproducible and short.</p>
+
+        <div class="panel">
+          <strong>SOP example (copy & edit)</strong>
+          <p>Invitation: administrative email sent to all third-year students on 2025-01-08. Consent page precedes the survey. Survey live from 2025-01-08 to 2025-01-20. Two reminders sent on day 3 and day 7. Interviews conducted by the lead researcher via Zoom and recorded with participant consent between 2025-02-01 and 2025-02-08.</p>
+        </div>
+
+        <h3>Field notes & quality control</h3>
+        <p>Keep a daily data collection log recording any incidents (server issues, email bounce rates, participant complaints). If a procedure changes mid-collection, log date, reason, and impact on data.</p>
+
+        <h3>Dealing with low response</h3>
+        <p>If response is lower than planned, document additional recruitment steps and any changes in sampling approach. Re-calculate power where necessary and report limitations.</p>
+      </section>
+
+      <!-- ETHICS -->
+      <section id="ethics" class="card">
+        <h2>Ethics, consent & confidentiality (how to write)</h2>
+
+        <h3>Ethics statement — what to include</h3>
+        <p>Report the approving body, approval number (if available), and a brief statement on consent. For interviews indicate whether consent was written or oral and how it was recorded.</p>
+
+        <div class="warn">
+          <strong>Required ethics sentence (use as-is):</strong>
+          <p>This study was approved by the Institutional Review Board of [Institution], approval number [XXXX]. All participants gave informed consent. Survey responses were anonymous; interview data were pseudonymized and stored on encrypted institutional servers.</p>
+        </div>
+
+        <h3>Privacy & data sharing</h3>
+        <p>State whether anonymized data or code will be shared (and where), or why data cannot be shared if restricted by ethics agreements.</p>
+
+        <h3>Pitfalls</h3>
+        <ul class="muted">
+          <li>Omitting IRB approval when human participants are involved</li>
+          <li>Failing to state how quotes are anonymized</li>
+        </ul>
+      </section>
+
+      <!-- DATAMANAGE -->
+      <section id="datamanage" class="card">
+        <h2>Data management, codebook & reproducibility</h2>
+
+        <h3>Data storage & backups</h3>
+        <p>State storage paths, backup frequency, and access control. For example: raw files are stored in a secure drive, backed up nightly, and access is limited to the core research team.</p>
+
+        <h3>Codebook summary</h3>
+        <p>Describe in text how the codebook is organized and what is included: variable name, label, type, possible values, and special codes for missing. You do not need to paste the full codebook in methods, but say where it is stored (institutional repository or with supervisor).</p>
+
+        <h3>Reproducibility statement</h3>
+        <p>Provide a short paragraph stating whether analysis scripts will be shared and where (GitHub, institutional repository), and include any restrictions.</p>
+      </section>
+
+      <!-- CLEAN -->
+      <section id="cleaning" class="card">
+        <h2>Data cleaning, outliers & missing data — exact steps</h2>
+
+        <h3>Cleaning checklist — copy this</h3>
+        <ol>
+          <li>Remove duplicate survey IDs and timestamps that indicate automated responses.</li>
+          <li>Check impossible values (age &lt; 10 or &gt; 100) and correct if possible or set NA.</li>
+          <li>Check for straight-lining on Likert scales (same response for all items) and flag for review.</li>
+          <li>Recode open-text categorical answers for consistency.</li>
+        </ol>
+
+        <h3>Outliers — how to handle</h3>
+        <p>Identify outliers using standard rules (3 SD from mean, or leverage in regression). Decide on a pre-specified rule: transform, Winsorize, or remove with justification. Report how many and why.</p>
+
+        <h3>Missing data — approach & justification</h3>
+        <p>Assess missing data mechanism (MCAR, MAR, MNAR) using patterns. Choose a treatment: listwise deletion for low missingness and MCAR; multiple imputation for MAR. Describe the number of imputations and the model used for imputation.</p>
+
+        <div class="panel">
+          <strong>Example handling paragraph</strong>
+          <p>We removed 5 duplicate entries. Missing on the primary scale was 4% and did not cluster by key demographics (Little's MCAR p = 0.21), so we used listwise deletion for primary analyses and multiple imputation (m = 5) for sensitivity checks; results were consistent.</p>
+        </div>
+
+        <h3>Pitfalls</h3>
+        <ul class="muted">
+          <li>Using mean imputation without noting induced bias</li>
+          <li>Failing to run sensitivity checks when using imputation</li>
+        </ul>
+      </section>
+
+      <!-- DESCRIPT -->
+      <section id="descript" class="card">
+        <h2>Descriptive analysis & visualization — what exactly to show</h2>
+
+        <h3>Participant flow & sample description</h3>
+        <p>Start results with sample flow and demographic table summary (age, gender, program). Provide counts and percentages, and for continuous variables give mean & SD and median if skewed.</p>
+
+        <h3>Variable distributions</h3>
+        <p>Show histogram or density plot for main continuous variables and provide simple interpretation (skewed, normal, multimodal). For categories show bar charts with percentages. For mobile, use single-column, tall charts rather than small multi-column grids.</p>
+
+        <div class="panel">
+          <strong>Descriptive paragraph example</strong>
+          <p>Of 500 invited, 150 started the survey and 126 completed it (response rate 25.2%). Mean age was 21.8 (SD = 2.1); 61% identified as female. Baseline motivation mean = 3.12 (SD = 0.70).</p>
+        </div>
+
+        <h3>Pitfalls</h3>
+        <ul class="muted">
+          <li>Reporting percentages without denominators (always include N)</li>
+          <li>Using too many decimals — round sensibly</li>
+        </ul>
+      </section>
+
+      <!-- INFER -->
+      <section id="inferential" class="card">
+        <h2>Inferential tests: how to pick, run and report</h2>
+
+        <h3>Choosing a test — decision rules</h3>
+        <p>Match test to question and data: paired t-test for within-subject pre-post; independent t-test for two independent groups; ANOVA for more than two groups with post-hoc; chi-square for categorical associations; non-parametric alternatives if assumptions fail. For associations consider correlation (Pearson or Spearman).</p>
+
+        <h3>Exact reporting format</h3>
+        <p>Always report: test name, test statistic (t, F, χ²), degrees of freedom, sample size where relevant, p-value, and effect size (Cohen's d, eta², OR, r). Optionally include 95% CI for estimates.</p>
+
+        <div class="panel">
+          <strong>Example sentence to paste</strong>
+          <p>Paired t-test showed a significant increase in motivation from pre (M = 3.12, SD = 0.70) to post (M = 3.79, SD = 0.60); t(125) = 6.45, p &lt; 0.001, Cohen's d = 0.59 (95% CI [0.39, 0.79]).</p>
+        </div>
+
+        <h3>Multiple testing & correction</h3>
+        <p>If you run many hypothesis tests, state the strategy for controlling type I error (Bonferroni, Benjamini-Hochberg, or pre-specified primary outcome). Be explicit which tests are primary and which are exploratory.</p>
+      </section>
+
+      <!-- ASSUMPTIONS -->
+      <section id="assumptions" class="card">
+        <h2>Assumption checks, effect sizes & confidence intervals</h2>
+
+        <h3>Assumption checks — which tests to run</h3>
+        <ul class="muted">
+          <li>Normality: Shapiro-Wilk for small samples, visual check for larger samples</li>
+          <li>Equality of variances: Levene's test</li>
+          <li>Linearity: residual plots for regression</li>
+          <li>Multicollinearity: VIF for multiple regression (VIF &gt; 5 or 10 indicates concern)</li>
+        </ul>
+
+        <h3>Effect sizes & CIs — how to interpret</h3>
+        <p>Effect size measures practical importance; CI shows precision. Always report both. Phrase interpretation in practical terms (small/medium/large according to standard thresholds, plus what that means for real students).</p>
+
+        <div class="panel">
+          <strong>Example language:</strong>
+          <p>Cohen's d = 0.59 indicates a medium effect; this difference is equivalent to moving from the 38th to the 72nd percentile in the distribution — a practically meaningful change for classroom outcomes.</p>
+        </div>
+      </section>
+
+      <!-- REGRESSION -->
+      <section id="regression" class="card">
+        <h2>Regression and multivariable modeling — practical guidance</h2>
+
+        <h3>Model specification — principles</h3>
+        <p>Specify model based on theory. Pre-specify confounders, not based on statistical significance alone. Avoid overfitting; keep a rule of thumb of at least 10–20 observations per predictor for linear regression.</p>
+
+        <h3>Model building strategy</h3>
+        <p>Prefer theoretical selection of covariates. If you use stepwise or data-driven selection, report it and perform sensitivity analyses with the full model and theory-driven reduced models.</p>
+
+        <h3>Reporting models</h3>
+        <p>Report coefficients, standard errors, p-values, 95% CI, and model fit statistics (R², adjusted R²). For logistic regression report ORs and CIs. Show residual diagnostics in appendix or mention if assumptions were met.</p>
+
+        <div class="panel">
+          <strong>Example model statement</strong>
+          <p>We regressed post-test motivation on module completion, prior GPA, age, and attendance. Module completion was associated with an adjusted increase of 0.42 points (B = 0.42, SE = 0.08, p &lt; 0.001, 95% CI [0.26, 0.58]).</p>
+        </div>
+      </section>
+
+      <!-- QUAL -->
+      <section id="qual" class="card">
+        <h2>Qualitative analysis — coding, themes & rigor</h2>
+
+        <h3>Transcription & preparation</h3>
+        <p>Transcribe verbatim. Check transcripts against audio. Remove identifiers. Use a consistent format and label each transcript with an ID code (P01, P02) that you will reference in the write-up.</p>
+
+        <h3>Coding process — a step-by-step method</h3>
+        <ol>
+          <li>Open coding: read each transcript and label meaningful segments with short codes.</li>
+          <li>Codebook: gather codes and write short definitions for each.</li>
+          <li>Axial coding: group related codes into categories and note relationships.</li>
+          <li>Thematic development: build higher-order themes that answer the research questions.</li>
+          <li>Validation: have a second coder code a subset and compute agreement; discuss disagreements and update codebook.</li>
+        </ol>
+
+        <h3>Reporting qualitative results</h3>
+        <p>For each theme provide a definition, the number of participants who mentioned it, and 1–3 short anonymized quotes. Explain how the theme answers the research question.</p>
+
+        <div class="panel">
+          <strong>Example theme report</strong>
+          <p><strong>Theme:</strong> Clear structure builds confidence.<br>
+          <strong>Definition:</strong> Participants reported that step-by-step tasks reduced uncertainty and increased willingness to attempt assessments.<br>
+          <strong>Quote:</strong> "When the module broke tasks into tiny steps, I knew exactly what to do and stopped procrastinating" (P07).</p>
+        </div>
+
+        <h3>Trustworthiness strategies</h3>
+        <p>Member checking, peer debrief, and audit trails strengthen qualitative credibility. Report which you used and how.</p>
+      </section>
+
+      <!-- TRIANG -->
+      <section id="triang" class="card">
+        <h2>Triangulation & mixed-methods integration</h2>
+
+        <h3>Integration logic</h3>
+        <p>Decide on sequential explanatory (quant → qual to explain), sequential exploratory (qual → quant to test themes), or convergent (both at same time). State the rationale and the timing in the methods.</p>
+
+        <h3>Joint displays & interpretation</h3>
+        <p>Create joint displays: a table that lines up quantitative results with qualitative themes for each research question. Use these displays to show confirmation, expansion, or contradiction between methods and discuss implications.</p>
+
+        <div class="panel">
+          <strong>Joint display example</strong>
+          <p>Quant: Motivation ↑ (p &lt; .001). Qual: Theme = "Structure + peers" explains why. Interpretation: Both data converge to suggest structured peer activities drive the change.</p>
+        </div>
+      </section>
+
+      <!-- RESULTS -->
+      <section id="results" class="card">
+        <h2>Results chapter — step-by-step structure and examples</h2>
+
+        <h3>Overall structure</h3>
+        <p>Structure the results chapter exactly: Opening reminder of RQs, sample description, descriptive statistics, hypothesis tests (in RQ order), regression models if used, qualitative themes (if present), and an evidence summary that answers each RQ plainly.</p>
+
+        <h3>Opening paragraph</h3>
+        <p>Briefly restate research questions and note sample size and key sample features so readers know the basis for findings.</p>
+
+        <div class="panel">
+          <strong>Opening example</strong>
+          <p>This chapter reports findings for three research questions listed in Chapter 1. Sample includes 126 completers (mean age 21.8, 61% female). Results present descriptive statistics, hypothesis tests, regression models, and qualitative themes in the same order as the research questions.</p>
+        </div>
+
+        <h3>Presenting tables and figures</h3>
+        <p>Label tables and figures as Table 1, Figure 1, etc. Provide titles and notes that explain sample and coding. For each table give a one-sentence textual statement of the main point (e.g., "Table 2 shows that mean motivation increased by 0.67 points"). Avoid interpreting reasons — save that for Discussion.</p>
+
+        <h3>Hypothesis result example</h3>
+        <div class="panel">
+          <strong>Example report</strong>
+          <p>RQ1: Paired comparisons indicated an increase in motivation from pre (M = 3.12, SD = 0.70) to post (M = 3.79, SD = 0.60); t(125) = 6.45, p &lt; .001, Cohen's d = 0.59. See Table 3 for subgroup breakdowns.</p>
+        </div>
+
+        <h3>Regression results</h3>
+        <p>Present model results in a compact table and state key coefficients in text. Highlight which predictors reached statistical significance and report model fit.</p>
+
+        <div class="code">
+          <strong>Example text:</strong><br>
+          In adjusted linear regression, module completion remained a significant predictor of post-test motivation (B = 0.42, SE = 0.08, p &lt; .001), after controlling for prior GPA and attendance.
+        </div>
+
+        <h3>Qualitative findings</h3>
+        <p>Present themes with short quotes and counts. Ensure quotes are anonymized. Link themes to specific RQs (e.g., "Theme 1 addresses RQ3").</p>
+
+        <h3>Summary paragraph</h3>
+        <p>End the chapter with a short, plain-language answer to each research question based on the evidence presented. No interpretation; just answers.</p>
+      </section>
+
+      <!-- DISCUSSION -->
+      <section id="discussion" class="card">
+        <h2>Discussion — paragraph-by-paragraph template and examples</h2>
+
+        <h3>Structure of the Discussion</h3>
+        <ol>
+          <li>Start with brief summary of key findings (2–3 sentences).</li>
+          <li>For each research question, use one to three paragraphs: state the finding, interpret with theory and prior research, discuss limitations affecting that finding, and state practical implications.</li>
+          <li>End with strengths and limitations of the study and suggestions for future research.</li>
+        </ol>
+
+        <h3>Paragraph template (use a copy-ready block)</h3>
+        <div class="panel">
+          <strong>Paragraph template</strong>
+          <p><em>Finding statement:</em> State the finding plainly. <em>Interpretation:</em> Explain why, tying to theory and prior studies. <em>Limitation:</em> Name one limitation that affects this claim. <em>Implication:</em> Give a specific recommendation for practice or research.</p>
+        </div>
+
+        <h3>Full example paragraph</h3>
+        <p>"Finding: Motivation increased significantly after the module. Interpretation: This aligns with self-determination theory; the module's step-by-step tasks likely increased perceived competence and the peer tasks increased relatedness, both boosting intrinsic motivation. Limitation: the study used a single university sample and short follow-up, so long-term effects are unknown. Implication: course designers should include short, structured activities and peer elements; future studies should test durability over a semester."</p>
+
+        <h3>Addressing contradictions</h3>
+        <p>If your results contradict earlier work, don't skip it. Explain sample or measurement differences and propose specific follow-up studies that could reconcile differences.</p>
+
+        <h3>Limitations section — be explicit</h3>
+        <p>List the main limitations succinctly: sample, measurement, non-random assignment, short follow-up, possible confounders, missing data strategy. For each, briefly describe the likely direction of bias if known.</p>
+
+        <div class="warn">
+          <strong>Example limitations text</strong>
+          <p>Main limitations include non-random assignment, single-site sample, and short-term follow-up. Non-random assignment could overestimate effects if more motivated students self-selected into the module.</p>
+        </div>
+
+        <h3>Strengths and contribution</h3>
+        <p>End discussion by summarizing the study's main contribution to knowledge and practice in one concise paragraph — what did you add that others did not?</p>
+      </section>
+
+      <!-- CONCLUSION -->
+      <section id="conclusion" class="card">
+        <h2>Conclusion — how to write a crisp, defensible ending</h2>
+
+        <h3>Structure (4 short paragraphs)</h3>
+        <ol>
+          <li>One-line restatement of aim and main findings.</li>
+          <li>One-line statement of the study’s practical contribution.</li>
+          <li>One-line summary of limitations that matter most.</li>
+          <li>Two concise suggestions for future research, precise and actionable.</li>
+        </ol>
+
+        <div class="panel">
+          <strong>Copy-ready conclusion (edit numbers):</strong>
+          <p>This study tested whether a structured multimedia module increases student motivation. Results show a statistically and practically meaningful increase in motivation scores and qualitative themes explain that clearer structure and peer tasks underpinned change. Main limitations are non-random assignment and short follow-up. Future research should test the module in multiple institutions with longer follow-up and use randomized designs where feasible to estimate causal effects precisely.</p>
+        </div>
+
+        <h3>Tone and length</h3>
+        <p>Keep the conclusion short — typically 1–2 pages maximum for a thesis chapter. Make sure nothing new is introduced here.</p>
+      </section>
+
+      <!-- FINAL -->
+      <section id="final" class="card">
+        <h2>Final checklist & common mistakes — do this now</h2>
+
+        <h3>Pre-submission checklist (do all)</h3>
+        <ul class="muted">
+          <li>Methodology clearly explains why (methodology) and how (methods).</li>
+          <li>Every RQ has an exact location where it is answered in Results and Discussion.</li>
+          <li>Variables and coding are fully specified and reproducible.</li>
+          <li>Pilot testing and reliability information are reported.</li>
+          <li>Data cleaning and missing-data plan are documented.</li>
+          <li>All tests report effect sizes and CIs; assumptions are checked and reported.</li>
+          <li>Discussion addresses limitations honestly and suggests concrete next steps.</li>
+        </ul>
+
+        <h3>Common mistakes and how to fix them</h3>
+        <ol class="muted">
+          <li><strong>Mistake:</strong> Mixing results and discussion. <br><strong>Fix:</strong> Move interpretation to Discussion and keep Results purely factual.</li>
+          <li><strong>Mistake:</strong> Overclaiming from correlational data. <br><strong>Fix:</strong> Use language like "associated with" and recommend experimental designs to test causality.</li>
+          <li><strong>Mistake:</strong> Not documenting data cleaning. <br><strong>Fix:</strong> Add a short subsection listing every cleaning step with numbers removed/changed.</li>
+          <li><strong>Mistake:</strong> Not pre-specifying primary outcome. <br><strong>Fix:</strong> State primary outcome clearly in Methods (this reduces suspicion of p-hacking).</li>
+        </ol>
+
+        <div class="cta">
+          <button class="btn" id="printBtn">Print / Save as PDF</button>
+        </div>
+      </section>
+
+      <footer style="margin-top:14px;color:var(--muted);font-size:13px">
+        <p>If you want, I will now expand any single subheading above into a full, paragraph-by-paragraph Methods or Results write-up (for example, a fully written Methods chapter you can copy into your thesis, or a complete Results chapter with dummy data tables and captions). Tell me the exact subheading (e.g., "Study design", "Data cleaning", "Regression models", or "Results chapter") and I will generate that full expansion in the same detailed style — immediately.</p>
+      </footer>
+    </main>
+  </div>
+</div>
+
+<script>
+  // Smooth scroll, print
+  document.querySelectorAll('nav a').forEach(a=>{
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      const id = this.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if(el) window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 12, behavior: 'smooth'});
+    });
+  });
+  document.getElementById('printBtn').addEventListener('click',()=>window.print());
+</script>
+</body>
+</html>
